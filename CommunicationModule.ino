@@ -7,7 +7,7 @@
 const char* ssid = "<Replace this with your own Wi-Fi name";
 const char* password = "<Replace this with your own Wi-Fi password>";
 
-IPAddress mqtt_broker(0, 0, 0, 0); // Replace this wity your device's verified working IP structure!
+IPAddress mqtt_broker(0, 0, 0, 0); // Replace this with your device's verified working IP structure!
 const int mqtt_port = 1883;
 const char* mqtt_topic_pub = "esp32/temperature";
 const char* mqtt_topic_sub = "esp32/commands";
