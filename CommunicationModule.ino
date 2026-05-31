@@ -4,20 +4,18 @@
 #include <time.h> // Required for real-world time tracking
 
 // --- Network & MQTT Configuration ---
-const char* ssid = "Rio_2.4G";
-const char* password = "rio#0707";
+const char* ssid = "<Replace this with your own Wi-Fi name>";
+const char* password = "<Replace this with your own Wi-Fi password>";
 
-IPAddress mqtt_broker(192, 168, 50, 55); // Your verified working IP structure!
+IPAddress mqtt_broker(0, 0, 0, 0); // Your verified working IP structure!
 const int mqtt_port = 1883;
 const char* mqtt_topic_pub = "esp32/temperature";
 const char* mqtt_topic_sub = "esp32/commands";
 
 // --- Time Zone Configuration ---
 const char* ntpServer = "pool.ntp.org";
-// Example for Greater Vancouver (Pacific Time: UTC-8, Daylight Savings UTC-7)
-const long gmtOffset_sec = -28800;      
-const int daylightOffset_sec = 3600;    
-// Note: If you are testing in Guangzhou, use: gmtOffset_sec = 28800; daylightOffset_sec = 0;
+const long gmtOffset_sec = 28800;      
+const int daylightOffset_sec = 0;    
 
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
